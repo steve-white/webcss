@@ -292,7 +292,6 @@ output,
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
 }
 .form-control:focus {
@@ -1023,7 +1022,6 @@ input[type="button"].btn-block {
 }
 .fade {
     opacity: 0;
-    -webkit-transition: opacity .15s linear;
     transition: opacity .15s linear
 }
 .fade.in {
@@ -1045,7 +1043,6 @@ tbody.collapse.in {
     position: relative;
     height: 0;
     overflow: hidden;
-    -webkit-transition: height .35s ease;
     transition: height .35s ease
 }
 .input-group {
@@ -1300,8 +1297,9 @@ button.close {
 .modal.fade .modal-dialog {
     -webkit-transform: translate3d(0, -25%, 0);
     transform: translate3d(0, -25%, 0);
-    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out;
     transition: transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out, -webkit-transform .3s ease-out;
     transition: transform .3s ease-out, -webkit-transform .3s ease-out
 }
 .modal.in .modal-dialog {
@@ -1743,7 +1741,8 @@ ol {
 }
 li {
     -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+         font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     margin-left: 1rem;
     margin-bottom: 1rem;
 }
@@ -1754,7 +1753,8 @@ li>ol {
 p {
     padding-top: .66001rem;
     -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+         font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     margin-top: 0
 }
 p,
@@ -1792,7 +1792,8 @@ h5,
 h6 {
     font-family: Arial, Helvetica, sans-serif;
     -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+         font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     font-style: normal;
     font-weight: 600;
     margin-top: 0;
@@ -2191,7 +2192,6 @@ img {
     width: 100%;
     height: 100%;
     z-index: 2;
-    -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
     background-color: #fff;
     padding-top: 51px;
@@ -2275,7 +2275,6 @@ img {
     top: 0;
     left: 0;
     z-index: 6;
-    -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
     will-change: left
 }
@@ -2591,7 +2590,6 @@ img {
     backface-visibility: hidden;
     background-color: #D3DAEA;
     height: 2px;
-    -webkit-transition: all .3s;
     transition: all .3s;
     width: 20px
 }
@@ -2678,7 +2676,6 @@ img {
     margin: 0 auto 16px;
     line-height: 1;
     color: #fff;
-    -webkit-transition: all .15s linear;
     transition: all .15s linear;
     -webkit-font-smoothing: antialiased
 }
@@ -2750,9 +2747,7 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(55, 61, 73, .8);
-    -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
-    -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
     will-change: left, opacity, visibility;
     z-index: 5;
@@ -2774,7 +2769,6 @@ img {
     display: inline-block;
     cursor: pointer;
     padding: 0 24px 0 0;
-    -webkit-transition: all ease .2s;
     transition: all ease .2s;
     background-color: #2B2F36;
     border-color: #2B2F36
@@ -2849,14 +2843,10 @@ img {
 .pagination--dillinger {
     padding: 0!important;
     margin: 1.5rem 0!important;
-    -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-line-pack: stretch;
@@ -2864,7 +2854,6 @@ img {
 }
 .pagination--dillinger,
 .pagination--dillinger li {
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex
 }
@@ -2921,7 +2910,6 @@ img {
     margin: 0 auto;
     max-width: 400px;
     text-align: center;
-    -webkit-transition: top .5s ease-in-out, opacity .5s ease-in-out;
     transition: top .5s ease-in-out, opacity .5s ease-in-out;
     visibility: hidden
 }
@@ -2935,13 +2923,10 @@ img {
     font-weight: 400;
     overflow: hidden;
     padding: 1rem 2rem .5rem;
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: baseline;
     -ms-flex-align: baseline;
     align-items: baseline;
-    -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center
 }
@@ -2967,7 +2952,6 @@ img {
     z-index: 10;
     background-color: #FFF;
     opacity: 0;
-    -webkit-transition: opacity .25s ease-in-out;
     transition: opacity .25s ease-in-out
 }
 .zen-wrapper.on {
@@ -4399,7 +4383,7 @@ img {
         margin-bottom: .33999rem
     }
     h1 {
-        font-size: 1.571429rem;
+        font-size: 1.4rem;
         margin-bottom: .21999rem;
         padding-top: .78001rem;
     }
